@@ -518,7 +518,7 @@ $(document).ready(function () {
         {
             error_erp_utilizado = '';
             $('#error_mod_e_qtde_de_impressoras_usb').text(error_mod_e_qtde_de_impressoras_usb);
-            $('#mod_e_qtde_de_impressoras_usb').removeClass('has-error');
+            $('#mod_e_qtde_de_impressoras').removeClass('has-error');
         }
 
         
