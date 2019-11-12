@@ -59,10 +59,11 @@ and open the template in the editor.
                         <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">Requerimentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">Contact Details</a>
+                        <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">Ambiente e Infra Estrutura</a>
                     </li>
                 </ul>
                 <div class="tab-content" style="margin-top:16px;">
+                    <!--PRIMEIRO BLOCO-->
                     <div class="tab-pane active" id="login_details">
                         <div class="panel panel-default">
                             <div class="panel-heading">Informações detalhadas</div>
@@ -111,6 +112,8 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+                    <!--FIM DO PRIMEIRO BLOCO-->
+                    <!--SEGUNDO BLOCO-->
                     <div class="tab-pane fade" id="personal_details">
                         <div class="panel panel-default">
                             <div class="panel-heading"><h3>Requerimentos do projeto</h3></div>
@@ -418,42 +421,42 @@ and open the template in the editor.
                                     <label id="disp_liberacao">Dispositivos de liberação:</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="web">
-                                        <label class="form-check-label" for="liberacao">
+                                        <label class="form-check-label" for="web">
                                             Web
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="mobile">
-                                        <label class="form-check-label" for="liberacao">
+                                        <label class="form-check-label" for="mobile">
                                             Mobile
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="tablet">
-                                        <label class="form-check-label" for="liberacao">
+                                        <label class="form-check-label" for="tablet">
                                             Tablet
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="embarcados">
-                                        <label class="form-check-label" for="liberacao">
+                                        <label class="form-check-label" for="embarcados">
                                             Embarcados
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="leitor_usb">
-                                        <label class="form-check-label" for="liberacao">
+                                        <label class="form-check-label" for="leitor_usb">
                                             Leitor usb
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="leitor_de_rede">
-                                        <label class="form-check-label" for="liberacao">
+                                        <label class="form-check-label" for="leitor_de_rede">
                                             Leitor de rede
                                         </label>
                                     </div>
@@ -469,20 +472,451 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+                    <!--FIM DO SEGUNDO BLOCO-->
+                    <!--TERCEIRO BLOCO-->
                     <div class="tab-pane fade" id="contact_details">
                         <div class="panel panel-default">
-                            <div class="panel-heading">Fill Contact Details</div>
+                            <div class="panel-heading"><h3>Ambiente e Infra Estrutura</h3><small> Informações sobre o ambiente do cliente em que a solução será implementada.</small></div>
                             <div class="panel-body">
                                 <div class="form-group">
-                                    <label>Enter Address</label>
-                                    <textarea name="address" id="address" class="form-control"></textarea>
-                                    <span id="error_address" class="text-danger"></span>
+                                    <label>Tipo de Implantação:</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="implementacao" value="nova" checked> Nova
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="implementacao" value="migracao"> Migração
+                                        </label>
+                                    </div>
+                                    <span id="error_implementacao" class="text-danger"></span>
                                 </div>
+
+
                                 <div class="form-group">
-                                    <label>Enter Mobile No.</label>
-                                    <input type="text" name="mobile_no" id="mobile_no" class="form-control" />
-                                    <span id="error_mobile_no" class="text-danger"></span>
+                                    <label>Tipo de Instalação:</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="instalacao" value="data_center" checked> Data center
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="instalacao" value="local"> Local
+                                        </label>
+                                    </div>
+                                    <span id="error_instalacao" class="text-danger"></span>
                                 </div>
+
+
+                                <div class="form-group">
+                                    <label>Quantidades de sites (Sede e Filiais):</label>
+                                    <input type="text" name="sites" id="sites" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_sites" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Quantidades de sites com servidor de impressão:</label>
+                                    <input type="text" name="impressao" id="impressao" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_impressao" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Quantidades de sites sem servidor de impressão:</label>
+                                    <input type="text" name="sem_server_imp" id="sem_server_imp" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_sem_server_imp" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Sistema operacional dos servidores de impressão:</label>
+                                    <input type="text" name="sis_op" id="sis_op" class="form-control" placeholder="Sua resposta" />
+                                    <span id="error_sis_op" class="text-danger"></span>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label>Os sites possuem comunicação entre si?</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="comunicacao_entre_sites" value="sim" checked> Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="comunicacao_entre_sites" value="nao"> Não
+                                        </label>
+                                    </div>
+                                    <span id="error_comunicacao_entre_sites" class="text-danger"></span>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label>Os usuários utilizam autenticação em suas estações?</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="user_autentic_estacoes" value="sim" checked> Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="user_autentic_estacoes" value="nao"> Não
+                                        </label>
+                                    </div>
+                                    <span id="error_user_autentic_estacoes" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Há impressão direta para impressoras de rede e/ou USB?</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="imp_rede_usb" value="sim" checked> Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="imp_rede_usb" value="nao"> Não
+                                        </label>
+                                    </div>
+                                    <span id="error_imp_rede_usb" class="text-danger"></span>
+                                </div>
+                                
+                                <h4>Sobre o Microsoft SQL Server:</h4>
+
+                                <div class="form-group">
+                                    <label for="licenca">O cliente possui licença Microsoft SQL Server disponível para uso?</label>
+                                    <select class="form-control" name="licenca_sql_server" id="licenca">
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="instalar">É permitido instalar a versão do Microsoft SQL Server Express?</label>
+                                    <select class="form-control" name="instalar_sql_server_express" id="instalar">
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                
+                                
+                                
+                                <div class="form-group">
+                                    <label id="server_dominio">Servidores de domínio / Autenticação:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="server_dominio_autenticacao" value="active_directory">
+                                        <label class="form-check-label" for="active_directory">
+                                            Active Directory
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="server_dominio_autenticacao" value="windows_nt">
+                                        <label class="form-check-label" for="windows_nt">
+                                            Windows NT
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="server_dominio_autenticacao" value="novell">
+                                        <label class="form-check-label" for="novell">
+                                            Novel
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="server_dominio_autenticacao" value="ldap">
+                                        <label class="form-check-label" for="ldap">
+                                            LDAP
+                                        </label>
+                                    </div>
+
+                                    <span id="error_server_dominio" class="text-danger"></span>
+
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Qual o tipo de importação utilizada no domínio?</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="importacao_dominio" value="contas" checked> Contas
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="importacao_dominio" value="grupos"> Grupos
+                                        </label>
+                                    </div>
+                                    <span id="error_importacao_dominio" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Quantidade de usuários:</label>
+                                    <input type="text" name="qtde_users" id="qtde_users" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_qtde_users" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Quantidade de contas:</label>
+                                    <input type="text" name="qtde_contas" id="qtde_contas" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_qtde_contas" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Quantidade de grupos:</label>
+                                    <input type="text" name="qtde_grupos" id="qtde_grupos" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_qtde_grupos" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Quantidade de estações de trabalho:</label>
+                                    <input type="text" name="qtde_estacoes_trabalho" id="qtde_estacoes_trabalho" class="form-control" placeholder="O valor deve ser um número" />
+                                    <span id="error_qtde_estacoes_trabalho" class="text-danger"></span>
+                                </div>
+
+                                
+                                <div class="form-group">
+                                    <label id="sis_op_est_trabalho">Sistema operacional das estações de trabalho:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="windows_2000">
+                                        <label class="form-check-label" for="windows_2000">
+                                            Windows 2000
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="windows_xp">
+                                        <label class="form-check-label" for="windows_xp">
+                                            Windows XP
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="windows_vista">
+                                        <label class="form-check-label" for="windows_vista">
+                                            Windows Vista
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="windows_seven">
+                                        <label class="form-check-label" for="windows_seven">
+                                            Windows 7
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="windows_oito">
+                                        <label class="form-check-label" for="windows_oito">
+                                            Windows 8 / 8.1
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="windows_dez">
+                                        <label class="form-check-label" for="windows_dez">
+                                            Windows 10
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="mac_os">
+                                        <label class="form-check-label" for="mac_os">
+                                            Mac OS
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="linux">
+                                        <label class="form-check-label" for="linux">
+                                            Linux
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="sis_op_est_trabalho" value="novell_netware">
+                                        <label class="form-check-label" for="novell_netware">
+                                            Novel Netware
+                                        </label>
+                                    </div>
+
+                                    <span id="error_sis_op_est_trabalho" class="text-danger"></span>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="navegadores_utilizados">Navegadores utilizados:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="navegadores_utilizados" value="internet_explorer">
+                                        <label class="form-check-label" for="internet_explorer">
+                                            Internet explorer
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="navegadores_utilizados" value="google_chrome">
+                                        <label class="form-check-label" for="google_chrome">
+                                            Google Chrome
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="navegadores_utilizados" value="firefox">
+                                        <label class="form-check-label" for="firefox">
+                                            Firefox
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="navegadores_utilizados" value="microsoft_edge">
+                                        <label class="form-check-label" for="microsoft_edge">
+                                            Microsoft Edge
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="navegadores_utilizados" value="safari">
+                                        <label class="form-check-label" for="safari">
+                                            Safari
+                                        </label>
+                                    </div>
+                                    
+                                    <span id="error_navegadores_utilizados" class="text-danger"></span>
+
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                    <label>Antivírus utilizado:</label>
+                                    <input type="text" name="antivirus_utilizado" id="antivirus_utilizado" class="form-control" placeholder="Insira sua resposta" />
+                                    <span id="error_antivirus_utilizado" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>ERP utilizado e sua versão:</label>
+                                    <input type="text" name="erp_utilizado" id="erp_utilizado" class="form-control" placeholder="Insira sua resposta" />
+                                    <span id="error_erp_utilizado" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Plataforma do ERP:</label>
+                                    <input type="text" name="plataforma_erp" id="plataforma_erp" class="form-control" placeholder="Insira sua resposta" />
+                                    <span id="error_plataforma_erp" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Descreva a forma de impressão do ERP:</label>
+                                    <textarea class="form-control" rows="5" name="impressao_erp" id="impressao_erp" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_impressao_erp" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>O ERP deve receber as informações do sistema de bilhetagem?</label>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="bilhetagem_erp" value="sim" checked> Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="bilhetagem_erp" value="nao"> Não
+                                        </label>
+                                    </div>
+                                    <span id="error_imp_rede_usb" class="text-danger"></span>
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                    <label id="forma_desej_bilhetagem_erp">Forma desejada para que o ERP receba as informações de bilhetagem:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="forma_desej_bilhetagem_erp" value="csv">
+                                        <label class="form-check-label" for="csv">
+                                            CSV
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="forma_desej_bilhetagem_erp" value="txt">
+                                        <label class="form-check-label" for="txt">
+                                            TXT
+                                        </label>
+                                    </div>
+                                    
+                                    <span id="error_forma_desej_bilhetagem_erp" class="text-danger"></span>
+
+                                </div>
+                                
+                                <h4>Impressões extraordinárias:</h4>
+
+                                <div class="form-group">
+                                    <label for="em_cluster">Em Cluster</label>
+                                    <select class="form-control" name="em_cluster" id="em_cluster">
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="em_cetrix">Em ambiente Citrixress</label>
+                                    <select class="form-control" name="em_cetrix" id="em_cetrix">
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="solaris">Em ambiente Sun Solaris</label>
+                                    <select class="form-control" name="solaris" id="solaris">
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="ibm">Em ambiente IBM AS/400</label>
+                                    <select class="form-control" name="ibm" id="ibm">
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                
+                                 <div class="form-group">
+                                    <label>Descreva o ambiente para impressões extraordinária:</label>
+                                    <br />
+                                    <small>
+                                        Somente responda caso tenha selecionado "Sim" em alguma das respostas na questão anterior.<br />
+                                        Descreva o ambiente de impressão extraordinária, citando o modelo e quantidade de servidores.
+                                    </small>
+                                    <br />
+                                    <textarea class="form-control" rows="5" name="amb_impressao_extraordinario" id="amb_impressao_extraordinario" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_amb_impressao_extraordinario" class="text-danger"></span>
+                                </div>
+                                
+                                 <div class="form-group">
+                                    <label>Modelo e quantidade de impressoras de rede:</label>
+                                    <br />
+                                    <small>
+                                        EX: Fabricante e modelo 1 (10 impressoras); Fabricante e modelo 2 (03 impressoras).
+                                    </small>
+                                    <br />
+                                    <textarea class="form-control" rows="5" name="mod_e_qtde_de_impressoras" id="mod_e_qtde_de_impressoras" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_mod_e_qtde_de_impressoras" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Modelo e quantidade de impressoras USB:</label>
+                                    <br />
+                                    <small>
+                                        EX: Fabricante e modelo 1 (10 impressoras); Fabricante e modelo 2 (03 impressoras).
+                                    </small>
+                                    <br />
+                                    <textarea class="form-control" rows="5" name="mod_e_qtde_de_impressoras_usb" id="mod_e_qtde_de_impressoras_usb" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_mod_e_qtde_de_impressoras_usb" class="text-danger"></span>
+                                </div>
+
+
                                 <br />
                                 <div align="center">
                                     <button type="button" name="previous_btn_contact_details" id="previous_btn_contact_details" class="btn btn-default btn-lg">Previous</button>
@@ -492,6 +926,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+                    <!--FIM DO TERCEIRO BLOCO-->
                 </div>
             </form>
         </div>
