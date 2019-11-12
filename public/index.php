@@ -202,21 +202,21 @@ and open the template in the editor.
                                     <label id="regras_imp">Regras de impressão (Necessário grupo no AD):</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="regras_imp" value="monocromatica">
-                                        <label class="form-check-label" for="relatorios">
+                                        <label class="form-check-label" for="regras_imp">
                                             Forçar impressão colorida para monocromática
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="regras_imp" value="duplex">
-                                        <label class="form-check-label" for="relatorios">
+                                        <label class="form-check-label" for="regras_imp">
                                             Forçar impressão para duplex
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="regras_imp" value="nao_utilizar">
-                                        <label class="form-check-label" for="relatorios">
+                                        <label class="form-check-label" for="regras_imp">
                                             Não utilizar
                                         </label>
                                     </div>
@@ -267,14 +267,14 @@ and open the template in the editor.
                                     <small>Somente responda em caso de utilização de cotas (Informativa ou Bloqueante).</small>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="alerta_cotas" value="email">
-                                        <label class="form-check-label" for="relatorios">
+                                        <label class="form-check-label" for="alerta_cotas">
                                             Por email
                                         </label>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="alerta_cotas" value="pop-up">
-                                        <label class="form-check-label" for="relatorios">
+                                        <label class="form-check-label" for="alerta_cotas">
                                             Pop up
                                         </label>
                                     </div>
@@ -288,12 +288,12 @@ and open the template in the editor.
                                     <small>Controle e limitação de impressões sob regras (politicas) de usuários e impressoras.</small>
                                     <div class="form-check">
                                         <label class="radio-inline">
-                                            <input type="radio" name="cotas" value="sim" checked> Sim
+                                            <input type="radio" name="policy" value="sim" checked> Sim
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="radio-inline">
-                                            <input type="radio" name="cotas" value="nao"> Não
+                                            <input type="radio" name="policy" value="nao"> Não
                                         </label>
                                     </div>
                                     <span id="error_policy" class="text-danger"></span>
@@ -306,36 +306,36 @@ and open the template in the editor.
                                     <label id="lib_cracha">Liberação por crachá:</label>
                                     <small>Cartão de aproximação</small>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="lib_cracha[]" value="hid_13.56" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="lib_cracha" value="hid_13.56">
+                                        <label class="form-check-label" for="lib_cracha">
                                             HID 13.56 MHZ
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="lib_cracha[]" value="hid_125" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="lib_cracha" value="hid_125">
+                                        <label class="form-check-label" for="lib_cracha">
                                             HID 125 KHZ
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="lib_cracha[]" value="mifare" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="lib_cracha" value="mifare">
+                                        <label class="form-check-label" for="lib_cracha">
                                             Mifare
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="lib_cracha[]" value="indala" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="lib_cracha" value="indala">
+                                        <label class="form-check-label" for="lib_cracha">
                                             Indala
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="lib_cracha[]" value="nao_utilizar" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="lib_cracha" value="nao_utilizar">
+                                        <label class="form-check-label" for="lib_cracha">
                                             Não utilizar
                                         </label>
                                     </div>
@@ -366,22 +366,22 @@ and open the template in the editor.
                                     <label id="tracking">Tracking:</label>
                                     <small>Impressão de informações na borda da página para rastreamento da origem de impressão.</small>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="tracking[]" value="personalizado" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="tracking" value="personalizado">
+                                        <label class="form-check-label" for="tracking">
                                             Texto Personalizado - Imprime nome do usuário, data, hora, entre outros
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="tracking" value="rastreio" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="tracking" value="rastreio"">
+                                        <label class="form-check-label" for="tracking">
                                             Código de Rastreio - Imprime um código para posterior identificação do usuário.
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="tracking[]" value="nao_utilizar" id="relatorios">
-                                        <label class="form-check-label" for="relatorios">
+                                        <input class="form-check-input" type="checkbox" name="tracking" value="nao_utilizar">
+                                        <label class="form-check-label" for="tracking">
                                             Não utilizar
                                         </label>
                                     </div>
@@ -417,42 +417,42 @@ and open the template in the editor.
                                 <div class="form-group">
                                     <label id="disp_liberacao">Dispositivos de liberação:</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao[]" value="web" id="liberacao">
+                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="web">
                                         <label class="form-check-label" for="liberacao">
                                             Web
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao[]" value="mobile" id="liberacao">
+                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="mobile">
                                         <label class="form-check-label" for="liberacao">
                                             Mobile
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao[]" value="tablet" id="liberacao">
+                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="tablet">
                                         <label class="form-check-label" for="liberacao">
                                             Tablet
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao[]" value="embarcados" id="liberacao">
+                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="embarcados">
                                         <label class="form-check-label" for="liberacao">
                                             Embarcados
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao[]" value="leitor_usb" id="liberacao">
+                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="leitor_usb">
                                         <label class="form-check-label" for="liberacao">
                                             Leitor usb
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao[]" value="leitor_de_rede" id="liberacao">
+                                        <input class="form-check-input" type="checkbox" name="dispositivos_liberacao" value="leitor_de_rede">
                                         <label class="form-check-label" for="liberacao">
                                             Leitor de rede
                                         </label>

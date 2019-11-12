@@ -176,7 +176,7 @@ $(document).ready(function () {
         if ($("input[name='tracking']:checked").is(":checked") == false)
         {
             error_tracking = 'Escolha uma opção';
-            $('#error_poll').text(error_tracking);
+            $('#error_tracking').text(error_tracking);
             $('#tracking').css({
                 "background-color": "#f8d7da",
                 "font-weight": "bold"
