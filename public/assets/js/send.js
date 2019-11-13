@@ -6,42 +6,39 @@
 
 $(document).ready(function () {
     
-    $('#btn_contact_details').on('click', function(e){
-        e.preventDefault();
-        var data = $('#register_form').serialize();
-        $(".resposta").html('<h5 class="text-success">Enviando sua mensagem...</h5>');
-        var url = 'result.php';
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: data,
-            dataType: 'json',
-            error: function (error) {
-                //alert('Erro ao tentar enviar requisição.');
-                console.log(error);
-                $(".resposta").html('<div class="alert alert-danger">Erro ao tentar enviar requisição.' + error + '</div>');
-            },
-
-            success: function (data) {
-                if (data['status'] === "success") {
-                    $(".resposta").html('<h5 class="text-success">' + data['message'] + '</h5>');
-                    $(".loading").fadeOut();
-                    $("#register_form")[0].reset();
-                } 
-                if (data['status'] === "failed") {
-                    $(".resposta").html('<h5 class="text-danger">' + data['message'] + '</h5>');
-                    $(".loading").fadeOut();
-                }
-                $(".resposta").html('<h5 class="text-success">Sua mensagem foi enviada com sucesso.</h5>');
-            },
-            beforeSend: function () {
-                //Loader
-                    $(".loading").html('<img src="assets/images/45.gif" />');
-            },
-            complete: function () {
-            }
-        });
+    $("#register_form").submit(function(event){
+    event.preventDefault(); //prevent default action 
+    var post_url = $(this).attr("action"); //get form action url
+    var request_method = $(this).attr("method"); //get form GET/POST method
+    var form_data = new FormData(this); //Encode form elements for submission
+    
+    $.ajax({
+        url : post_url,
+        type: request_method,
+        data : form_data,
+		contentType: false,
+		processData:false,
+		xhr: function(){
+		//upload Progress
+		var xhr = $.ajaxSettings.xhr();
+		if (xhr.upload) {
+			xhr.upload.addEventListener('progress', function(event) {
+				var percent = 0;
+				var position = event.loaded || event.position;
+				var total = event.total;
+				if (event.lengthComputable) {
+					percent = Math.ceil(position / total * 100);
+				}
+				//update progressbar
+				$("#upload-progress .progress-bar").css("width", + percent +"%");
+			}, true);
+		}
+		return xhr;
+	}
+    }).done(function(response){ //
+        $(".resposta").html(response);
     });
+});
     
 });
 

@@ -60,7 +60,7 @@ and open the template in the editor.
             <h3 align="center">Obrigado por preencher o checklist de soluções da OfficeTotal!</h3><br />
             <h4 align="center">É importante que nos seja fornecido o máximo de informação, para que possamos melhor entender as necessidades e expectativas com a solução apresentada, bem como, conhecermos melhor o ambiente em que ela será implementada.</h4><br />
             <h4 align="center">Equipe de soluções OfficeTotal. </h4><br />
-            <form method="post" id="register_form">
+            <form method="post" id="register_form" action="result.php">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active_tab1" style="border:1px solid #ccc" id="list_login_details">Informações gerais</a>
