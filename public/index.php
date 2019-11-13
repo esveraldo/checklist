@@ -39,6 +39,16 @@ and open the template in the editor.
             .form-check-label {
                 font-weight: normal;
             }
+            .loading {
+                width:100px;
+                height:100px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                margin-top:-50px;
+                margin-left:-50px;
+                z-index: 9999;
+            }
         </style>
     </head>
     <body>
@@ -109,6 +119,7 @@ and open the template in the editor.
                                     <button type="button" name="btn_personal_details" id="btn_info_gerais" class="btn btn-info btn-lg">Next</button>
                                 </div>
                                 <br />
+                                <div align="center" class="resposta"></div>
                             </div>
                         </div>
                     </div>
@@ -915,13 +926,93 @@ and open the template in the editor.
                                     <textarea class="form-control" rows="5" name="mod_e_qtde_de_impressoras_usb" id="mod_e_qtde_de_impressoras_usb" placeholder="Insira sua resposta"></textarea>
                                     <span id="error_mod_e_qtde_de_impressoras_usb" class="text-danger"></span>
                                 </div>
-
+                                
+                                <h4>Fechamento</h4>
+                                
+                                <small>
+                                    Informações, observações e sugestões para entendimento do projeto.
+                                </small>
+                                <br />
+                                <br />
+                                
+                                <div class="form-group">
+                                    <label>O(s) servidor(es) de impressão será de responsabilidade da contratada?</label>
+                                    <br />
+                                    <small>
+                                        Caso "Sim", deve ser acordado previamente com o comercial da OfficeTotal, pois isso altera o escopo do projeto e seu valor para loação do serviço.
+                                    </small>
+                                    <br />
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="server_imp_resp" value="sim" checked> Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="server_imp_resp" value="nao"> Não
+                                        </label>
+                                    </div>
+                                    <span id="error_server_imp_resp" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Caso o(s) servidor(es) de impressão sejam de responsabilidade da contratada. Há algum tipo de restrição quanto ao fabricante do hardware e seu modelo?</label>
+                                    <br />
+                                    <small>
+                                        Somente responda caso tenha selecionado "Sim" na questão anterior.
+                                    </small>
+                                    <br />
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="restricoes_do_fabricante" value="sim" checked> Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="restricoes_do_fabricante" value="nao"> Não
+                                        </label>
+                                    </div>
+                                    <span id="error_server_imp_resp" class="text-danger"></span>
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                    <label>Descreva a restrição:</label>
+                                    <br />
+                                    <small>
+                                        Somente responda caso tenha selecionado "Sim" na questão anterior.
+                                    </small>
+                                    <br />
+                                    <textarea class="form-control" rows="5" name="descricao_restricao" id="descricao_restricao" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_descricao_restricao" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Objetivo do projeto:</label>
+                                    <br />
+                                    <small>
+                                        Descreva brevemente o objetivo do projeto, para entendermos a expectativa quanto a solução.<br />
+                                        Ex: Controle de impressão, cópia, digitalizações e fax. Controle de suprimentos e etc... 
+                                    </small>
+                                    <br />
+                                    <textarea class="form-control" rows="5" name="objetivo_projeto" id="objetivo_projeto" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_objetivo_projeto" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Observações adicionais:</label>
+                                    <textarea class="form-control" rows="5" name="observacoes_adicionais" id="observacoes_adicionais" placeholder="Insira sua resposta"></textarea>
+                                    <span id="error_observacoes_adicionais" class="text-danger"></span>
+                                </div>
+                                
+                                
 
                                 <br />
                                 <div align="center">
                                     <button type="button" name="previous_btn_contact_details" id="previous_btn_contact_details" class="btn btn-default btn-lg">Previous</button>
                                     <button type="button" name="btn_contact_details" id="btn_contact_details" class="btn btn-success btn-lg">Register</button>
                                 </div>
+                                <div align="center" class="resposta"></div>
                                 <br />
                             </div>
                         </div>
@@ -930,9 +1021,11 @@ and open the template in the editor.
                 </div>
             </form>
         </div>
+        
 
     </body>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/send.js"></script>
 </html>
 
 

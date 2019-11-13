@@ -143,6 +143,10 @@ $(document).ready(function () {
         {
             error_bilhetagem = '';
              $('#error_bilhetagem').text(error_bilhetagem);
+             $('#bilhetagem').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($("input[name='relatorios']:checked").is(":checked") == false)
@@ -157,6 +161,10 @@ $(document).ready(function () {
         {
             error_relatorios = '';
              $('#error_relatorios').text(error_relatorios);
+             $('#relatorios').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($("input[name='regras_imp']:checked").is(":checked") == false)
@@ -171,6 +179,10 @@ $(document).ready(function () {
         {
             error_regras_imp = '';
              $('#error_regras_imp').text(error_regras_imp);
+             $('#regras_imp').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($("input[name='tracking']:checked").is(":checked") == false)
@@ -185,6 +197,10 @@ $(document).ready(function () {
         {
             error_tracking = '';
              $('#error_tracking').text(error_tracking);
+             $('#tracking').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($("input[name='lib_cracha']:checked").is(":checked") == false)
@@ -199,6 +215,10 @@ $(document).ready(function () {
         {
             error_cracha = '';
              $('#error_cracha').text(error_cracha);
+              $('#lib_cracha').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($("input[name='dispositivos_liberacao']:checked").is(":checked") == false)
@@ -213,6 +233,10 @@ $(document).ready(function () {
         {
             error_disp_lib = '';
              $('#error_disp_lib').text(error_disp_lib);
+             $('#disp_liberacao').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($("input[name='alerta_cotas']:checked").is(":checked") == false)
@@ -227,6 +251,10 @@ $(document).ready(function () {
         {
             error_cotas = '';
              $('#error_cotas').text(error_cotas);
+             $('#alerta_cotas').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
 
@@ -280,6 +308,9 @@ $(document).ready(function () {
         var error_amb_impressao_extraordinario = '';
         var error_mod_e_qtde_de_impressoras = '';
         var error_mod_e_qtde_de_impressoras_usb = '';
+        var error_descricao_restricao = '';
+        var error_objetivo_projeto = '';
+        var error_observacoes_adicionais = '';
      
         if ($.trim($('#sites').val()).length == 0)
         {
@@ -329,9 +360,9 @@ $(document).ready(function () {
             $('#sis_op').removeClass('has-error');
         }
         
-        if ($.trim($('#server_dominio').val()).length == 0)
+        if ($("input[name='server_dominio_autenticacao']:checked").is(":checked") == false)
         {
-            error_sis_op = 'Servidore de dominio / autenticação é obrigatório';
+            error_server_dominio = 'Servidore de dominio / autenticação é obrigatório';
             $('#error_server_dominio').text(error_server_dominio);
             $('#server_dominio').css({
                 "background-color": "#f8d7da",
@@ -342,6 +373,10 @@ $(document).ready(function () {
             error_server_dominio = '';
             $('#error_server_dominio').text(error_server_dominio);
             $('#server_dominio').removeClass('has-error');
+            $('#server_dominio').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($.trim($('#qtde_users').val()).length == 0)
@@ -390,9 +425,13 @@ $(document).ready(function () {
             error_qtde_estacoes_trabalho = '';
             $('#error_qtde_estacoes_trabalho').text(error_qtde_estacoes_trabalho);
             $('#qtde_estacoes_trabalho').removeClass('has-error');
+            $('#qtde_estacoes_trabalho').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
-        if ($.trim($('#sis_op_est_trabalho').val()).length == 0)
+        if ($("input[name='sis_op_est_trabalho']:checked").is(":checked") == false)
         {
             error_sis_op_est_trabalho = 'Sistemas operacionais de trabalho é obrigatório';
             $('#error_sis_op_est_trabalho').text(error_sis_op_est_trabalho);
@@ -402,12 +441,16 @@ $(document).ready(function () {
             });
         } else
         {
-            error_qtde_grupos = '';
+            error_sis_op_est_trabalho = '';
             $('#error_sis_op_est_trabalho').text(error_sis_op_est_trabalho);
             $('#sis_op_est_trabalho').removeClass('has-error');
+            $('#sis_op_est_trabalho').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
-        if ($.trim($('#navegadores_utilizados').val()).length == 0)
+        if ($("input[name='navegadores_utilizados']:checked").is(":checked") == false)
         {
             error_navegadores_utilizados = 'Navegadores utilizados é obrigatório';
             $('#error_navegadores_utilizados').text(error_navegadores_utilizados);
@@ -417,9 +460,13 @@ $(document).ready(function () {
             });
         } else
         {
-            error_qtde_grupos = '';
+            error_navegadores_utilizados = '';
             $('#error_navegadores_utilizados').text(error_navegadores_utilizados);
             $('#navegadores_utilizados').removeClass('has-error');
+            $('#navegadores_utilizados').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($.trim($('#antivirus_utilizado').val()).length == 0)
@@ -470,7 +517,7 @@ $(document).ready(function () {
             $('#impressao_erp').removeClass('has-error');
         }
         
-        if ($.trim($('#forma_desej_bilhetagem_erp').val()).length == 0)
+        if ($("input[name='forma_desej_bilhetagem_erp']:checked").is(":checked") == false)
         {
             error_forma_desej_bilhetagem_erp = 'Forma desejada de bilhetagem é obrigatório';
             $('#error_forma_desej_bilhetagem_erp').text(error_forma_desej_bilhetagem_erp);
@@ -480,9 +527,13 @@ $(document).ready(function () {
             });
         } else
         {
-            error_qtde_grupos = '';
+            error_forma_desej_bilhetagem_erp = '';
             $('#error_forma_desej_bilhetagem_erp').text(error_forma_desej_bilhetagem_erp);
             $('#forma_desej_bilhetagem_erp').removeClass('has-error');
+            $('#forma_desej_bilhetagem_erp').css({
+                "background-color": "#fff",
+                "font-weight": "bold"
+            });
         }
         
         if ($.trim($('#amb_impressao_extraordinario').val()).length == 0)
@@ -519,6 +570,42 @@ $(document).ready(function () {
             error_erp_utilizado = '';
             $('#error_mod_e_qtde_de_impressoras_usb').text(error_mod_e_qtde_de_impressoras_usb);
             $('#mod_e_qtde_de_impressoras').removeClass('has-error');
+        }
+        
+        if ($.trim($('#descricao_restricao').val()).length == 0)
+        {
+            error_descricao_restricao = 'Por favor, a resposta é obrigatório';
+            $('#error_descricao_restricao').text(error_descricao_restricao);
+            $('#descricao_restricao').addClass('has-error');
+        } else
+        {
+            error_descricao_restricao = '';
+            $('#error_descricao_restricao').text(error_descricao_restricao);
+            $('#descricao_restricao').removeClass('has-error');
+        }
+        
+        if ($.trim($('#objetivo_projeto').val()).length == 0)
+        {
+            error_objetivo_projeto = 'Por favor, a resposta é obrigatório';
+            $('#error_objetivo_projeto').text(error_objetivo_projeto);
+            $('#objetivo_projeto').addClass('has-error');
+        } else
+        {
+            error_objetivo_projeto = '';
+            $('#error_objetivo_projeto').text(error_objetivo_projeto);
+            $('#objetivo_projeto').removeClass('has-error');
+        }
+        
+        if ($.trim($('#observacoes_adicionais').val()).length == 0)
+        {
+            error_observacoes_adicionais = 'Por favor, a resposta é obrigatório';
+            $('#error_observacoes_adicionais').text(error_observacoes_adicionais);
+            $('#observacoes_adicionais').addClass('has-error');
+        } else
+        {
+            error_observacoes_adicionais = '';
+            $('#error_observacoes_adicionais').text(error_observacoes_adicionais);
+            $('#observacoes_adicionais').removeClass('has-error');
         }
 
         
