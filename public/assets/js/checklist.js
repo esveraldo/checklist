@@ -131,7 +131,7 @@ $(document).ready(function () {
         var error_disp_lib = '';
         var error_cotas = '';
         
-        if ($("input[name='bilhetagem']:checked").is(":checked") == false)
+        if ($("input[name='bilhetagem[]']:checked").is(":checked") == false)
         {
             error_bilhetagem = 'Escolha uma opção';
             $('#error_bilhetagem').text(error_bilhetagem);
@@ -149,7 +149,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='relatorios']:checked").is(":checked") == false)
+        if ($("input[name='relatorios[]']:checked").is(":checked") == false)
         {
             error_relatorios = 'Escolha uma opção';
             $('#error_relatorios').text(error_relatorios);
@@ -167,7 +167,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='regras_imp']:checked").is(":checked") == false)
+        if ($("input[name='regras_imp[]']:checked").is(":checked") == false)
         {
             error_regras_imp = 'Escolha uma opção';
             $('#error_regras_imp').text(error_regras_imp);
@@ -185,7 +185,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='tracking']:checked").is(":checked") == false)
+        if ($("input[name='tracking[]']:checked").is(":checked") == false)
         {
             error_tracking = 'Escolha uma opção';
             $('#error_tracking').text(error_tracking);
@@ -203,7 +203,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='lib_cracha']:checked").is(":checked") == false)
+        if ($("input[name='lib_cracha[]']:checked").is(":checked") == false)
         {
             error_cracha = 'Escolha uma opção';
             $('#error_cracha').text(error_cracha);
@@ -221,7 +221,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='dispositivos_liberacao']:checked").is(":checked") == false)
+        if ($("input[name='dispositivos_liberacao[]']:checked").is(":checked") == false)
         {
             error_disp_lib = 'Escolha uma opção';
             $('#error_disp_lib').text(error_disp_lib);
@@ -239,7 +239,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='alerta_cotas']:checked").is(":checked") == false)
+        if ($("input[name='alerta_cotas[]']:checked").is(":checked") == false)
         {
             error_cotas = 'Escolha uma opção';
             $('#error_cotas').text(error_cotas);
@@ -360,7 +360,7 @@ $(document).ready(function () {
             $('#sis_op').removeClass('has-error');
         }
         
-        if ($("input[name='server_dominio_autenticacao']:checked").is(":checked") == false)
+        if ($("input[name='server_dominio_autenticacao[]']:checked").is(":checked") == false)
         {
             error_server_dominio = 'Servidore de dominio / autenticação é obrigatório';
             $('#error_server_dominio').text(error_server_dominio);
@@ -431,7 +431,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='sis_op_est_trabalho']:checked").is(":checked") == false)
+        if ($("input[name='sis_op_est_trabalho[]']:checked").is(":checked") == false)
         {
             error_sis_op_est_trabalho = 'Sistemas operacionais de trabalho é obrigatório';
             $('#error_sis_op_est_trabalho').text(error_sis_op_est_trabalho);
@@ -450,7 +450,7 @@ $(document).ready(function () {
             });
         }
         
-        if ($("input[name='navegadores_utilizados']:checked").is(":checked") == false)
+        if ($("input[name='navegadores_utilizados[]']:checked").is(":checked") == false)
         {
             error_navegadores_utilizados = 'Navegadores utilizados é obrigatório';
             $('#error_navegadores_utilizados').text(error_navegadores_utilizados);
@@ -517,7 +517,7 @@ $(document).ready(function () {
             $('#impressao_erp').removeClass('has-error');
         }
         
-        if ($("input[name='forma_desej_bilhetagem_erp']:checked").is(":checked") == false)
+        if ($("input[name='forma_desej_bilhetagem_erp[]']:checked").is(":checked") == false)
         {
             error_forma_desej_bilhetagem_erp = 'Forma desejada de bilhetagem é obrigatório';
             $('#error_forma_desej_bilhetagem_erp').text(error_forma_desej_bilhetagem_erp);
@@ -569,7 +569,7 @@ $(document).ready(function () {
         {
             error_erp_utilizado = '';
             $('#error_mod_e_qtde_de_impressoras_usb').text(error_mod_e_qtde_de_impressoras_usb);
-            $('#mod_e_qtde_de_impressoras').removeClass('has-error');
+            $('#mod_e_qtde_de_impressoras_usb').removeClass('has-error');
         }
         
         if ($.trim($('#descricao_restricao').val()).length == 0)
@@ -609,10 +609,15 @@ $(document).ready(function () {
         }
 
         
-
-        
-        
-        if (error_sites != '' || error_impressao != '' || error_sem_server_imp != '' || error_sis_op != '' || error_server_dominio != '' || error_qtde_users != '' || error_qtde_contas != '' || error_qtde_grupos != '')
+        if (error_sites != '' || error_impressao != '' || error_sem_server_imp != '' || 
+                error_sis_op != '' || error_server_dominio != '' || error_qtde_users != '' || 
+                error_qtde_contas != '' || error_qtde_grupos != '' || error_qtde_estacoes_trabalho != '' ||
+                error_sis_op_est_trabalho != '' || error_navegadores_utilizados != '' || error_antivirus_utilizado != '' || 
+                error_erp_utilizado != '' || error_plataforma_erp != '' || error_impressao_erp != '' ||
+                error_observacoes_adicionais != '' || error_objetivo_projeto != '' || error_descricao_restricao != '' ||
+                error_mod_e_qtde_de_impressoras_usb != '' || error_mod_e_qtde_de_impressoras != '' || 
+                error_amb_impressao_extraordinario != '' || error_forma_desej_bilhetagem_erp != '' 
+                )
         {
             return false;
         } else

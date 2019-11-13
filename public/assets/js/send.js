@@ -5,26 +5,35 @@
  */
 
 $(document).ready(function () {
-    
-    $("#register_form").submit(function(event){
-    event.preventDefault(); //prevent default action 
-    var post_url = $(this).attr("action"); //get form action url
-    var request_method = $(this).attr("method"); //get form GET/POST method
-    var form_data = new FormData(this); //Encode form elements for submission
-    
-    $.ajax({
-        url : post_url,
-        type: request_method,
-        data : form_data,
-        contentType: false,
-        cache: false,
-        processData:false,
-		
-    }).done(function(response){ //
-        $(".resposta").html(response);
+
+    $("#register_form").submit(function (event) {
+        event.preventDefault(); //prevent default action 
+        var post_url = $(this).attr("action"); //get form action url
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = new FormData(this); //Encode form elements for submission
+
+        $.ajax({
+            url: post_url,
+            type: request_method,
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+
+        }).done(function (response) { //
+            //$(".resposta").html(response);
+            var data = JSON.parse(response);
+            console.log(response);
+            console.log(data);
+            console.log(data.status);
+            if (data.status === "success") {
+                $(".resposta").html('<div class="alert alert-success">Dados gravados com sucesso!</div>');
+            }
+            if (data.status === "failed") {
+                $(".resposta").html('<div class="alert alert-danger">Erro ao gravar os dados!</div>');
+            }
+        });
     });
-});
-    
 });
 
 
