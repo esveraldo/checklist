@@ -9,10 +9,14 @@
 $status = array('success' => '', 'failed' => '');
 
 if(!empty($_POST)){
-    $status['success'] = 'success';
-    echo json_encode($status['success']);
+    /*$status['success'] = 'success';
+    echo json_encode($status['success']);*/
+    echo '<br>';
+    echo '<div class="alert alert-secondary" role="alert"> Dados gravados com sucesso! </div>';
 }else{
-    $status['failed'] = 'failed';
-    echo json_encode($status['failed']);
+    /*$status['failed'] = 'failed';
+    echo json_encode($status['failed']);*/
+    echo '<br>';
+    echo '<div class="alert alert-danger" role="alert"> houve um erro ao gravar os dados! </div>';
 }
 

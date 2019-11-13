@@ -16,25 +16,10 @@ $(document).ready(function () {
         url : post_url,
         type: request_method,
         data : form_data,
-		contentType: false,
-		processData:false,
-		xhr: function(){
-		//upload Progress
-		var xhr = $.ajaxSettings.xhr();
-		if (xhr.upload) {
-			xhr.upload.addEventListener('progress', function(event) {
-				var percent = 0;
-				var position = event.loaded || event.position;
-				var total = event.total;
-				if (event.lengthComputable) {
-					percent = Math.ceil(position / total * 100);
-				}
-				//update progressbar
-				$("#upload-progress .progress-bar").css("width", + percent +"%");
-			}, true);
-		}
-		return xhr;
-	}
+        contentType: false,
+        cache: false,
+        processData:false,
+		
     }).done(function(response){ //
         $(".resposta").html(response);
     });
