@@ -95,6 +95,7 @@ $(document).ready(function () {
 
         if (rsocial != '' || cnpj != '' || endereco != '' || contato != '' || telefone != '' || email != '')
         {
+            $("#page_one").html('<div class="alert alert-danger">Existe um erro acima!</div>');
             return false;
         } else
         {
@@ -261,6 +262,7 @@ $(document).ready(function () {
 
         if (error_bilhetagem != '' || error_relatorios != '' || error_regras_imp != '' || error_tracking != '' || error_cracha != '' || error_disp_lib != '' || error_cotas != '')
         {
+            $("#page_two").html('<div class="alert alert-danger">Existe um erro acima!</div>');
             return false;
         } else
         {
@@ -619,6 +621,7 @@ $(document).ready(function () {
                 error_amb_impressao_extraordinario != '' || error_forma_desej_bilhetagem_erp != '' 
                 )
         {
+            $(".resposta").html('<div class="alert alert-danger">Existe um erro acima!</div>');
             return false;
         } else
         {

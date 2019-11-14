@@ -119,7 +119,8 @@ and open the template in the editor.
                                     <button type="button" name="btn_personal_details" id="btn_info_gerais" class="btn btn-info btn-lg">Next</button>
                                 </div>
                                 <br />
-                                <div align="center" class="resposta"></div>
+                                <br />
+                                <div align="center" id="page_one"></div>
                             </div>
                         </div>
                     </div>
@@ -492,6 +493,8 @@ and open the template in the editor.
                                     <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Next</button>
                                 </div>
                                 <br />
+                                <br />
+                                <div align="center" id="page_two"></div>
                             </div>
                         </div>
                     </div>
