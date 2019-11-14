@@ -20,9 +20,11 @@ $(document).ready(function () {
             cache: false,
             processData: false,
 
-        }).done(function (response) { //
+        }).done(function (response) {
+            console.log(response);
+            $(".resposta").html('<div class="alert alert-success">Dados gravados com sucesso!</div>');
             //$(".resposta").html(response);
-            var data = JSON.parse(response);
+            /*var data = JSON.parse(response);
             console.log(response);
             console.log(data);
             console.log(data.status);
@@ -31,7 +33,11 @@ $(document).ready(function () {
             }
             if (data.status === "failed") {
                 $(".resposta").html('<div class="alert alert-danger">Erro ao gravar os dados!</div>');
-            }
+            }*/
+        })
+        .fail(function(response){
+            console.log(response);
+            $(".resposta").html('<div class="alert alert-danger">Erro ao gravar os dados!</div>');
         });
     });
 });

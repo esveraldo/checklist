@@ -38,7 +38,10 @@ $result = $dados->select();
                     <td><?=$res['contato']?></td>
                     <td><?=$res['telefone']?></td>
                     <td><?=$res['email']?></td>
-                    <td><a class="btn btn-primary" href="relatorio-em-pdf.php?id=<?=$res['id']?>" role="button">Gerar PDF</a></td>
+                    <td>
+                        <a target="_blank" class="btn btn-primary" href="relatorio.php?id=<?=$res['id']?>" role="button">Ver</a> | 
+                        <a class="btn btn-primary" href="relatorio-em-pdf.php?id=<?=$res['id']?>" role="button">Gerar PDF</a>
+                    </td>
                 </tr>
                 <?php 
                     }
