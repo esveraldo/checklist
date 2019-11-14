@@ -28,5 +28,4 @@ class Container {
         $selClientsChecklist = new SelectClientsChecklist(self::conn());
         return $selClientsChecklist;
     }
-
 }

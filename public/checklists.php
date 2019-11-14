@@ -39,6 +39,10 @@ and open the template in the editor.
             .form-check-label {
                 font-weight: normal;
             }
+            .nowrap {
+                white-space: nowrap;
+                font-weight: normal;
+            }
         </style>
     </head>
     <body>
@@ -181,6 +185,10 @@ and open the template in the editor.
                                             Centro de custo
                                         </label>
                                     </div>
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="relatorios[]" id="outros"/>
+                                    </label>
                                     <span id="error_relatorios" class="text-danger"></span>
                                 </div>
 
@@ -343,6 +351,10 @@ and open the template in the editor.
                                             Não utilizar
                                         </label>
                                     </div>
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="lib_cracha[]" id="outros"/>
+                                    </label>
                                     <span id="error_cracha" class="text-danger"></span>
                                 </div>
 
@@ -461,6 +473,10 @@ and open the template in the editor.
                                             Leitor de rede
                                         </label>
                                     </div>
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="dispositivos_liberacao[]" id="outros"/>
+                                    </label>
                                     <span id="error_disp_lib" class="text-danger"></span>
 
                                 </div>
@@ -633,7 +649,10 @@ and open the template in the editor.
                                             LDAP
                                         </label>
                                     </div>
-
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="server_dominio_autenticacao[]" id="outros"/>
+                                    </label>
                                     <span id="error_server_dominio" class="text-danger"></span>
 
                                 </div>
@@ -650,6 +669,10 @@ and open the template in the editor.
                                             <input type="radio" name="importacao_dominio" value="grupos"> Grupos
                                         </label>
                                     </div>
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="importacao_dominio" id="outros"/>
+                                    </label>
                                     <span id="error_importacao_dominio" class="text-danger"></span>
                                 </div>
 
@@ -742,7 +765,10 @@ and open the template in the editor.
                                             Novel Netware
                                         </label>
                                     </div>
-
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="sis_op_est_trabalho[]" id="outros"/>
+                                    </label>
                                     <span id="error_sis_op_est_trabalho" class="text-danger"></span>
 
                                 </div>
@@ -783,7 +809,10 @@ and open the template in the editor.
                                             Safari
                                         </label>
                                     </div>
-
+                                    
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="navegadores_utilizados[]" id="outros"/>
+                                    </label>
                                     <span id="error_navegadores_utilizados" class="text-danger"></span>
 
                                 </div>

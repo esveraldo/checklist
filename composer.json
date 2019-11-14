@@ -5,7 +5,8 @@
 		"email": "esveraldo@hotmail.com"
 	}],
 	"require": {
-		"php": ">=5.4"
+		"php": ">=5.4",
+		"ext-gd": "*"
 	},
 	"require-dev": {
 
