@@ -679,9 +679,9 @@ and open the template in the editor.
                                         </label>
                                     </div>
                                     
-                                    <label for="outros" class="nowrap">Outros:
+<!--                                    <label for="outros" class="nowrap">Outros:
                                         <input type="text" name="importacao_dominio" id="outros"/>
-                                    </label>
+                                    </label>-->
                                     <span id="error_importacao_dominio" class="text-danger"></span>
                                 </div>
 

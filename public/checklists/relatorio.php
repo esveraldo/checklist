@@ -5,12 +5,12 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use App\DI\Container;
 
 $dados = Container::getSelectClientsChecklist();
-$id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
+$id = filter_input(INPUT_POST, 'id', FILTER_DEFAULT);
 $dados->setId($id);
 $result = $dados->selectOne();
 ?>
@@ -27,6 +27,11 @@ $result = $dados->selectOne();
     <body>
 
         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-xs-12 text-center" style="margin-top: 30px;">
+                    <a class="btn btn-primary" href="listagem" role="button">Voltar a página anterior</a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12 col-xs-12">
                     <h1>Checklist Office Total</h1>
@@ -360,6 +365,11 @@ $result = $dados->selectOne();
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-xs-12 text-center" style="margin-top: 30px; margin-bottom: 30px;">
+                    <a class="btn btn-primary" href="listagem" role="button">Voltar a página anterior</a>
                 </div>
             </div>
         </div>

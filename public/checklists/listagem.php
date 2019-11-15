@@ -17,7 +17,9 @@ $result = $dados->select();
                     <th scope="col">Contato</th>
                     <th scope="col">Telefone</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col" style="width: 30px;">Ver</th>
+                    <th scope="col" style="width: 30px;">PDF</th>
+                    <th scope="col" style="width: 30px;">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,8 +41,19 @@ $result = $dados->select();
                     <td><?=$res['telefone']?></td>
                     <td><?=$res['email']?></td>
                     <td>
-                        <a target="_blank" class="btn btn-primary" href="relatorio.php?id=<?=$res['id']?>" role="button">Ver</a> | 
+                        <form method="POST" action="relatorio">
+                            <input type="hidden" name="id" value="<?=$res['id']?>" />
+                            <button class="btn btn-primary">Ver</button>
+                        </form>
+                    </td>
+                    <td>
                         <a class="btn btn-primary" href="relatorio-em-pdf.php?id=<?=$res['id']?>" role="button">Gerar PDF</a>
+                    </td>
+                    <td>
+                        <form method="POST" action="status">
+                            <input type="hidden" name="id" value="<?=$res['id']?>" />
+                            <button class="btn btn-primary">Status</button>
+                        </form>
                     </td>
                 </tr>
                 <?php 

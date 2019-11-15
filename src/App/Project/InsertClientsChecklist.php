@@ -19,6 +19,9 @@ class InsertClientsChecklist {
 
     private $connection;
     private $fields = [];
+    private $clients_checklist_id;
+    private $status;
+    private $obs;
     
     function getFields() {
         return $this->fields;
@@ -27,7 +30,32 @@ class InsertClientsChecklist {
     function setFields($fields) {
         $this->fields = $fields;
     }
+    
+    function getClients_checklist_id() {
+        return $this->clients_checklist_id;
+    }
 
+    function getStatus() {
+        return $this->status;
+    }
+
+    function getObs() {
+        return $this->obs;
+    }
+
+    function setClients_checklist_id($clients_checklist_id) {
+        $this->clients_checklist_id = $clients_checklist_id;
+    }
+
+    function setStatus($status) {
+        $this->status = $status;
+    }
+
+    function setObs($obs) {
+        $this->obs = $obs;
+    }
+
+    
     
     public function __construct(InterfaceConnection $conn) {
         $this->connection = $conn->getConnection();
@@ -98,8 +126,28 @@ class InsertClientsChecklist {
                                    ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
                                    ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ");
 			$stmt->execute($this->getFields());
+                        $id = $this->connection->lastInsertId();
+			if($stmt->rowCount() > 0){			
+                                return $id;
+			}else{
+				return false;
+			}
+		}catch(\PDOException $e){
+			echo 'Erro: ' . $e->getMessage();
+		}
+	}
+        
+        public function insertObs()
+	{
+		try{
+			$stmt = $this->connection->prepare("INSERT INTO status_checklist(clients_checklist_id, status, obs) 
+                            VALUES(:clients_checklist_id, :status, :obs)");
+                        $stmt->bindValue(":clients_checklist_id", $this->getClients_checklist_id());
+                        $stmt->bindValue(":status", $this->getStatus());
+                        $stmt->bindValue(":obs", $this->getObs());
+			$stmt->execute();
 			if($stmt->rowCount() > 0){
-				return true;
+                                return true;
 			}else{
 				return false;
 			}

@@ -119,6 +119,17 @@ CREATE TABLE IF NOT EXISTS clients_checklist (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
 
+CREATE TABLE IF NOT EXISTS status_checklist (
+    id INT AUTO_INCREMENT PRIMARY KEY,   
+    clients_checklist_id INT NOT NULL,
+    status VARCHAR(100) NOT NULL,
+    obs TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)  ENGINE=INNODB;
+
+ALTER TABLE status_checklist ADD FOREIGN KEY (clients_checklist_id) REFERENCES clients_checklist(id);
+
+
 
 
 

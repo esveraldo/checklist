@@ -6,6 +6,7 @@ use App\Connections\Base;
 use App\Helpers\Urls;
 use App\Project\SelectClientsChecklist;
 use App\Project\InsertClientsChecklist;
+use App\Project\UpdateClientsChecklist;
 
 class Container {
 
@@ -27,5 +28,10 @@ class Container {
     public static function getSelectClientsChecklist() {
         $selClientsChecklist = new SelectClientsChecklist(self::conn());
         return $selClientsChecklist;
+    }
+    
+    public static function getUpdateClientsChecklist() {
+        $updateClientsChecklist = new UpdateClientsChecklist(self::conn());
+        return $updateClientsChecklist;
     }
 }

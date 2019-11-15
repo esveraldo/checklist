@@ -53,4 +53,20 @@ class SelectClientsChecklist
 		}
 	}
         
+        public function selectObs()
+	{
+		try{
+			$stmt = $this->connection->prepare("SELECT * FROM status_checklist WHERE clients_checklist_id = :id");
+                        $stmt->bindValue(":id", $this->getId());
+			$stmt->execute();
+			if($stmt->rowCount() > 0){
+				return $stmt->fetch();
+			}else{
+				return false;
+			}
+		}catch(\PDOException $e){
+			echo 'Erro: ' . $e->getMessage();
+		}
+	}
+        
 }

@@ -128,8 +128,12 @@ $result = $insertDados->insert();
 
 $response = array("status" => null, "success" => null, "message" => null);
 
-if($result){
-     $response = array("status" => "success", "message" => "success");
+if($result != false){
+    $insertDados->setClients_checklist_id($result);
+    $insertDados->setStatus("inicial");
+    $insertDados->setObs("Sem observações");
+    $insertDados->insertObs();
+    $response = array("status" => "success", "message" => "success");
 }else{
     $response = array("status" => "failed", "message" => "failed");
 }
