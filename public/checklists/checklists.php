@@ -1054,8 +1054,8 @@ and open the template in the editor.
 
 
     </body>
-    <script src="assets/js/checklist.js"></script>
-    <script src="assets/js/send.js"></script>
+    <script src="../assets/js/checklist.js"></script>
+    <script src="../assets/js/send.js"></script>
     <script>
 
                                         /*Função Pai de Mascaras*/

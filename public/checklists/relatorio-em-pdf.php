@@ -1,6 +1,6 @@
 <?php
 
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 use App\DI\Container;
 $dados = Container::getSelectClientsChecklist();
@@ -12,7 +12,7 @@ $result = $dados->selectOne();
 use Dompdf\Dompdf;
 
 // include autoloader
-require_once("./libs/dompdf/autoload.inc.php");
+require_once("../libs/dompdf/autoload.inc.php");
 
 //Criando a Instancia
 $dompdf = new Dompdf(['isHtml5ParserEnabled' => true]);
