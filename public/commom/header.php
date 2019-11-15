@@ -43,7 +43,7 @@
 
             <ul class="nav nav-pills nav-stacked" style="border-right:1px solid black">
                 <!--<li class="nav-header"></li>-->
-                <li><a href="/checklist/public/checklists/dashboard-checklist"><i class="fa fa-list"></i> Checklist</a></li>
+                <li><a href="/checklist/public/checklists/listagem"><i class="fa fa-list"></i> Checklist</a></li>
                 <!--<li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                 <li><a href="#"><i class="fa fa-tags"></i> Referal Code</a></li>
                 <li><a href="#"><i class="fa fa-history"></i> Redeem History</a></li>
