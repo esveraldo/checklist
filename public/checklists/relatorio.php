@@ -85,7 +85,7 @@ $result = $dados->selectOne();
                         <tbody>
                             <tr>
                                 <td><?= $result["bilhetagem"] ?></td>
-                                <td><?= $result["relatorios"] ?></td>
+                                <td><?= $composto_1 = $result["outros_relatorios"] != "" ? $result["relatorios"] . ", " . $result["outros_relatorios"] : $result["relatorios"]  ?></td>
                                 <td><?= $result["listagem"] ?></td>
                             </tr>
                         </tbody>
@@ -120,7 +120,7 @@ $result = $dados->selectOne();
                             <tr>
                                 <td><?= $result["alerta_cotas"] ?></td>
                                 <td><?= $result["policy"] ?></td>
-                                <td><?= $result["lib_cracha"] ?></td>
+                                <td><?= $composto_2 = $result["outros_lib_cracha"] != "" ? $result["lib_cracha"] . ", " . $result["outros_lib_cracha"] : $result["lib_cracha"] ?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -155,7 +155,7 @@ $result = $dados->selectOne();
                         </thead>
                         <tbody>
                             <tr>
-                                <td><?= $result["dispositivos_liberacao"] ?></td>
+                                <td><?= $composto_3 = $result["outros_dispositivos_liberacao"] != "" ? $result["dispositivos_liberacao"] . ", " . $result["outros_dispositivos_liberacao"] : $result["dispositivos_liberacao"] ?></td>
                                 <td><?= $result["implementacao"] ?></td>     
                             </tr>
                         </tbody>
@@ -222,8 +222,8 @@ $result = $dados->selectOne();
                         </thead>
                         <tbody>
                             <tr>
-                                <td><?= $result["server_dominio_autenticacao"] ?></td>
-                                <td><?= $result["importacao_dominio"] ?></td>
+                                <td><?= $composto_4 = $result["outros_server_dominio_autenticacao"] != "" ? $result["server_dominio_autenticacao"] . ", " . $result["outros_server_dominio_autenticacao"] : $result["server_dominio_autenticacao"] ?></td>
+                                <td><?= $composto_5 = $result["outros_importacao_dominio"] != "" ? $result["importacao_dominio"] . ", " . $result["outros_importacao_dominio"] : $result["importacao_dominio"] ?></td>
                                 <td><?= $result["qtde_users"] ?></td>
                             </tr>
                         </tbody>
@@ -257,8 +257,8 @@ $result = $dados->selectOne();
                         </thead>
                         <tbody>
                             <tr>
-                                <td><?= $result["sis_op_est_trabalho"] ?></td>
-                                <td><?= $result["navegadores_utilizados"] ?></td>     
+                                <td><?= $composto_6 = $result["outros_sis_op_est_trabalho"] != "" ? $result["sis_op_est_trabalho"] . ", " . $result["outros_sis_op_est_trabalho"] : $result["sis_op_est_trabalho"] ?></td>
+                                <td><?= $composto_7 = $result["outros_navegadores_utilizados"] != "" ? $result["navegadores_utilizados"] . ", " . $result["outros_navegadores_utilizados"] : $result["navegadores_utilizados"] ?></td>     
                             </tr>
                         </tbody>
                     </table>

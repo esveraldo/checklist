@@ -73,6 +73,7 @@ class InsertClientsChecklist {
                             email,
                             bilhetagem,
                             relatorios,
+                            outros_relatorios,
                             listagem,
                             regras_imp,
                             pool,
@@ -80,10 +81,12 @@ class InsertClientsChecklist {
                             alerta_cotas,
                             policy,
                             lib_cracha,
+                            outros_lib_cracha,
                             chargerback,
                             tracking,
                             releaser,
                             dispositivos_liberacao,
+                            outros_dispositivos_liberacao,
                             implementacao,
                             instalacao,
                             sites,
@@ -96,13 +99,17 @@ class InsertClientsChecklist {
                             licenca_sql_server,
                             instalar_sql_server_express,
                             server_dominio_autenticacao,
+                            outros_server_dominio_autenticacao,
                             importacao_dominio,
+                            outros_importacao_dominio,
                             qtde_users,
                             qtde_contas,
                             qtde_grupos,
                             qtde_estacoes_trabalho,
                             sis_op_est_trabalho,
+                            outros_sis_op_est_trabalho,
                             navegadores_utilizados,
+                            outros_navegadores_utilizados,
                             antivirus_utilizado,
                             erp_utilizado,
                             plataforma_erp,
@@ -124,7 +131,7 @@ class InsertClientsChecklist {
                                  ) 
                             VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
                                    ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
-                                   ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ");
+                                   ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ");
 			$stmt->execute($this->getFields());
                         $id = $this->connection->lastInsertId();
 			if($stmt->rowCount() > 0){			

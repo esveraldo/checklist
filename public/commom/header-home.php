@@ -21,7 +21,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/checklist/public/home"><img src="../assets/images/logo-officetotal.png" width="100px" /></a>
+                    <a class="navbar-brand" href="/checklist/public/home"><img src="assets/images/logo-officetotal.png" width="100px" /></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">

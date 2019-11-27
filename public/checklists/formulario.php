@@ -56,9 +56,7 @@ and open the template in the editor.
         <br />
         <div class="container box">
             <br />
-            <h2 align="center">Checklist de Soluções - Billing & Outsourcing</h2><br />
-            <h3 align="center">Obrigado por preencher o checklist de soluções da OfficeTotal!</h3><br />
-            <h4 align="center">É importante que nos seja fornecido o máximo de informação, para que possamos melhor entender as necessidades e expectativas com a solução apresentada, bem como, conhecermos melhor o ambiente em que ela será implementada.</h4><br />
+            <h2 align="center">Seja bem vindo.</h2><br />
             <h4 align="center">Equipe de soluções OfficeTotal. </h4><br />
             <form method="post" id="register_form" action="helpers/record-checklist.php">
                 <ul id="responsive" class="nav nav-tabs">
@@ -194,7 +192,7 @@ and open the template in the editor.
                                     </div>
                                     
                                     <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="relatorios[]" id="outros"/>
+                                        <input type="text" name="outros_relatorios" id="outros"/>
                                     </label>
                                     <span id="error_relatorios" class="text-danger"></span>
                                 </div>
@@ -360,7 +358,7 @@ and open the template in the editor.
                                     </div>
                                     
                                     <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="lib_cracha[]" id="outros"/>
+                                        <input type="text" name="outros_lib_cracha" id="outros"/>
                                     </label>
                                     <span id="error_cracha" class="text-danger"></span>
                                 </div>
@@ -482,7 +480,7 @@ and open the template in the editor.
                                     </div>
                                     
                                     <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="dispositivos_liberacao[]" id="outros"/>
+                                        <input type="text" name="outros_dispositivos_liberacao" id="outros"/>
                                     </label>
                                     <span id="error_disp_lib" class="text-danger"></span>
 
@@ -660,7 +658,7 @@ and open the template in the editor.
                                     </div>
                                     
                                     <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="server_dominio_autenticacao[]" id="outros"/>
+                                        <input type="text" name="outros_server_dominio_autenticacao" id="outros"/>
                                     </label>
                                     <span id="error_server_dominio" class="text-danger"></span>
 
@@ -679,9 +677,9 @@ and open the template in the editor.
                                         </label>
                                     </div>
                                     
-<!--                                    <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="importacao_dominio" id="outros"/>
-                                    </label>-->
+                                    <label for="outros" class="nowrap">Outros:
+                                        <input type="text" name="outros_importacao_dominio" id="outros"/>
+                                    </label>
                                     <span id="error_importacao_dominio" class="text-danger"></span>
                                 </div>
 
@@ -776,7 +774,7 @@ and open the template in the editor.
                                     </div>
                                     
                                     <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="sis_op_est_trabalho[]" id="outros"/>
+                                        <input type="text" name="outros_sis_op_est_trabalho" id="outros"/>
                                     </label>
                                     <span id="error_sis_op_est_trabalho" class="text-danger"></span>
 
@@ -820,7 +818,7 @@ and open the template in the editor.
                                     </div>
                                     
                                     <label for="outros" class="nowrap">Outros:
-                                        <input type="text" name="navegadores_utilizados[]" id="outros"/>
+                                        <input type="text" name="outros_navegadores_utilizados" id="outros"/>
                                     </label>
                                     <span id="error_navegadores_utilizados" class="text-danger"></span>
 

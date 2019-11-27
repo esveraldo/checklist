@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS clients_checklist (
     email varchar(50) null,
     bilhetagem varchar(255) null,
     relatorios varchar(255) null,
+    outros_relatorios varchar(255) null,
     listagem varchar(5) null,
     regras_imp varchar(255) null,
     pool varchar(5) null,
@@ -75,10 +76,12 @@ CREATE TABLE IF NOT EXISTS clients_checklist (
     alerta_cotas varchar(255) null,
     policy varchar(5) null,
     lib_cracha varchar(255) null,
+    outros_lib_cracha varchar(255) null,
     chargerback varchar(5) null,
     tracking varchar(255) null,
     releaser varchar(20) null,
     dispositivos_liberacao varchar(255) null,
+    outros_dispositivos_liberacao varchar(255) null,
     implementacao varchar(5) null,
     instalacao varchar(20) null,
     sites varchar(10) null,
@@ -91,13 +94,18 @@ CREATE TABLE IF NOT EXISTS clients_checklist (
     licenca_sql_server varchar(5) null,
     instalar_sql_server_express varchar(5) null,
     server_dominio_autenticacao varchar(255) null,
+    outros_server_dominio_autenticacao varchar(255) null,
     importacao_dominio varchar(10) null,
+    outros_importacao_dominio varchar(255) null,
     qtde_users varchar(5) null,
     qtde_contas varchar(5) null,
     qtde_grupos varchar(5) null,
     qtde_estacoes_trabalho varchar(5) null,
     sis_op_est_trabalho varchar(255) null,
+    outros_sis_op_est_trabalho varchar(255) null,
     navegadores_utilizados varchar(255) null,
+    outros_navegadores_utilizados varchar(255) null,
+    dr varchar(255) null,
     antivirus_utilizado varchar(255) null,
     erp_utilizado varchar(255) null,
     plataforma_erp varchar(255) null,
@@ -127,7 +135,7 @@ CREATE TABLE IF NOT EXISTS status_checklist (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
 
-ALTER TABLE status_checklist ADD FOREIGN KEY (clients_checklist_id) REFERENCES clients_checklist(id);
+ALTER TABLE status_checklist ADD FOREIGN KEY (clients_checklist_id) REFERENCES clients_checklist(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 

@@ -8,6 +8,20 @@ $id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
 $dados->setId($id);
 $result = $dados->selectOne();
 
+$composto_1 = $result["outros_relatorios"] != "" ? $result["relatorios"] . ", " . $result["outros_relatorios"] : $result["relatorios"];
+
+$composto_2 = $result["outros_lib_cracha"] != "" ? $result["lib_cracha"] . ", " . $result["outros_lib_cracha"] : $result["lib_cracha"];
+
+$composto_3 = $result["outros_dispositivos_liberacao"] != "" ? $result["dispositivos_liberacao"] . ", " . $result["outros_dispositivos_liberacao"] : $result["dispositivos_liberacao"];
+
+$composto_4 = $result["outros_server_dominio_autenticacao"] != "" ? $result["server_dominio_autenticacao"] . ", " . $result["outros_server_dominio_autenticacao"] : $result["server_dominio_autenticacao"];
+
+$composto_5 = $result["outros_importacao_dominio"] != "" ? $result["importacao_dominio"] . ", " . $result["outros_importacao_dominio"] : $result["importacao_dominio"];
+
+$composto_6 = $result["outros_sis_op_est_trabalho"] != "" ? $result["sis_op_est_trabalho"] . ", " . $result["outros_sis_op_est_trabalho"] : $result["sis_op_est_trabalho"];
+
+$composto_7 = $result["outros_navegadores_utilizados"] != "" ? $result["navegadores_utilizados"] . ", " . $result["outros_navegadores_utilizados"] : $result["navegadores_utilizados"];
+
 //referenciar o DomPDF com namespace
 use Dompdf\Dompdf;
 
@@ -358,7 +372,7 @@ $dompdf->load_html('
   <tbody>
     <tr>
       <td>'.$result["bilhetagem"].'</td>
-      <td>'.$result["relatorios"].'</td>
+      <td>'.$composto_1.'</td>
       <td>'.$result["listagem"].'</td>
     </tr>
   </tbody>
@@ -393,7 +407,7 @@ $dompdf->load_html('
     <tr>
       <td>'.$result["alerta_cotas"].'</td>
       <td>'.$result["policy"].'</td>
-      <td>'.$result["lib_cracha"].'</td>
+      <td>'.$composto_2.'</td>
     </tr>
   </tbody>
 </table>
@@ -428,7 +442,7 @@ $dompdf->load_html('
   </thead>
   <tbody>
     <tr>
-      <td>'.$result["dispositivos_liberacao"].'</td>
+      <td>'.$composto_3.'</td>
       <td>'.$result["implementacao"].'</td>     
     </tr>
   </tbody>
@@ -495,8 +509,8 @@ $dompdf->load_html('
   </thead>
   <tbody>
     <tr>
-      <td>'.$result["server_dominio_autenticacao"].'</td>
-      <td>'.$result["importacao_dominio"].'</td>
+      <td>'.$composto_4.'</td>
+      <td>'.$composto_5.'</td>
       <td>'.$result["qtde_users"].'</td>
     </tr>
   </tbody>
@@ -530,8 +544,8 @@ $dompdf->load_html('
   </thead>
   <tbody>
     <tr>
-      <td>'.$result["sis_op_est_trabalho"].'</td>
-      <td>'.$result["navegadores_utilizados"].'</td>     
+      <td>'.$composto_6.'</td>
+      <td>'.$composto_7.'</td>     
     </tr>
   </tbody>
 </table>
