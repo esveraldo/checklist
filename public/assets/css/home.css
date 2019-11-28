@@ -10,7 +10,8 @@ and open the template in the editor.
 
 .navbar-inverse
 {
-    background:#00796B;
+    /*background:#00796B;*/
+    background:#000;
     border-bottom-color: #004D40;
 }
 .navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>.dropdown>a .caret

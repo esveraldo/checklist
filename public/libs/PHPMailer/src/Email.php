@@ -41,16 +41,17 @@ class Email {
             //$mail->SMTPDebug = 2;                                  // Enable verbose debug output
             $this->mail->SMTPDebug = false;                             // Enable verbose debug output
             $this->mail->isSMTP();                                      // Set mailer to use SMTP
-            $this->mail->Host = 'mail.prixpay.com';                     // Specify main and backup SMTP servers
+            $this->mail->Host = 'smtp.officetotal.com.br';                     // Specify main and backup SMTP servers
             $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $this->mail->Username = 'postmaster@prixpay.com';                 // SMTP username
-            $this->mail->Password = '1q2w3e!';                          // SMTP password
+            $this->mail->Username = 'alerta@officetotal.com.br';                 // SMTP username
+            $this->mail->Password = '@@Oft2017!';                          // SMTP password
             $this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $this->mail->Port = 587;                                    // TCP port to connect to
             $this->mail->CharSet = 'UTF-8';
             //Recipients
-            $this->mail->setFrom('contato@pixpay.com', 'PrixPay');
+            $this->mail->setFrom('alerta@officetotal.com.br');
             //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
+            $this->mail->addAddress('pablo.oliveira@officetotal.com.br', 'Pablo');     // Add a recipient
             $this->mail->addAddress($this->email);                           // Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');
             //$mail->addCC('cc@example.com');

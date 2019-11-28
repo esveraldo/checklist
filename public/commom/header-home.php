@@ -20,6 +20,7 @@ error_reporting(E_ALL);
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="../assets/css/home.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <title>Checklist Office Total</title>
@@ -57,6 +58,7 @@ error_reporting(E_ALL);
 
             <ul class="nav nav-pills nav-stacked" style="border-right:1px solid black">
                 <!--<li class="nav-header"></li>-->
+                <li><a href="/checklist/public/home"><i class="fa fa-home"></i> Página inicial</a></li>
                 <li><a href="/checklist/public/checklists/listagem"><i class="fa fa-list"></i> Checklist</a></li>
                 <!--<li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                 <li><a href="#"><i class="fa fa-tags"></i> Referal Code</a></li>

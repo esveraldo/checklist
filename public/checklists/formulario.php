@@ -114,7 +114,7 @@ and open the template in the editor.
 
                                 <br />
                                 <div align="center">
-                                    <button type="button" name="btn_personal_details" id="btn_info_gerais" class="btn btn-info btn-lg">Next</button>
+                                    <button type="button" name="btn_personal_details" id="btn_info_gerais" class="btn btn-info btn-lg">Próximo</button>
                                 </div>
                                 <br />
                                 <br />
@@ -487,8 +487,8 @@ and open the template in the editor.
                                 </div>
                                 <br />
                                 <div align="center">
-                                    <button type="button" name="previous_btn_personal_details" id="previous_btn_personal_details" class="btn btn-default btn-lg">Previous</button>
-                                    <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Next</button>
+                                    <button type="button" name="previous_btn_personal_details" id="previous_btn_personal_details" class="btn btn-default btn-lg">Anterior</button>
+                                    <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Próximo</button>
                                 </div>
                                 <br />
                                 <br />
@@ -1035,8 +1035,8 @@ and open the template in the editor.
 
                                 <br />
                                 <div align="center">
-                                    <button type="button" name="previous_btn_contact_details" id="previous_btn_contact_details" class="btn btn-default btn-lg">Previous</button>
-                                    <button type="button" name="btn_contact_details" id="btn_contact_details" class="btn btn-success btn-lg">Register</button>
+                                    <button type="button" name="previous_btn_contact_details" id="previous_btn_contact_details" class="btn btn-default btn-lg">Anterior</button>
+                                    <button type="button" name="btn_contact_details" id="btn_contact_details" class="btn btn-success btn-lg">Enviar</button>
                                 </div>
                                 <br />
                                 <br />
