@@ -1,4 +1,18 @@
 <?php require_once '../vendor/autoload.php';?>
+<?php
+ob_start();
+
+use App\DI\Container;
+
+$ses = Container::getSes();
+if ($ses->ses()) {
+    header("Location: /checklist/public/login");
+}
+
+set_time_limit(0);
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,7 +42,7 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> Admin <span class="caret"></span></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        <li><a href="../logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>

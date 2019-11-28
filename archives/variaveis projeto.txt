@@ -137,6 +137,16 @@ CREATE TABLE IF NOT EXISTS status_checklist (
 
 ALTER TABLE status_checklist ADD FOREIGN KEY (clients_checklist_id) REFERENCES clients_checklist(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
+CREATE TABLE IF NOT EXISTS authentication (
+    id INT AUTO_INCREMENT PRIMARY KEY,   
+    nome VARCHAR(100) NOT NULL,
+    login VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)  ENGINE=INNODB;
+
+INSERT INTO authentication (nome, login, senha) VALUES ('admin', 'admin', 'Mudar@@12');
+
 
 
 

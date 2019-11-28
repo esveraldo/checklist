@@ -1,4 +1,18 @@
 <?php require_once '../vendor/autoload.php';?>
+<?php
+ob_start();
+
+use App\DI\Container;
+
+$ses = Container::getSes();
+if ($ses->ses()) {
+    header("Location: login");
+}
+
+set_time_limit(0);
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,9 +40,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> Admin <span class="caret"></span></a>
+                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> <?php echo $_SESSION['nome'];?> <span class="caret"></span></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        <li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>

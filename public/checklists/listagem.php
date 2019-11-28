@@ -1,6 +1,16 @@
 <?php include_once './commom/header.php';?>
 <?php 
+ob_start();
+
 use App\DI\Container;
+
+$ses = Container::getSes();
+if ($ses->ses()) {
+    header("Location: /checklist/public/login");
+}
+
+set_time_limit(0);
+
 $dados = Container::getSelectClientsChecklist();
 $result = $dados->select();
 ?>

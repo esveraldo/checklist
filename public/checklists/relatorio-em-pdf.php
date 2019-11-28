@@ -2,7 +2,17 @@
 
 require_once '../../vendor/autoload.php';
 
+ob_start();
+
 use App\DI\Container;
+
+$ses = Container::getSes();
+if ($ses->ses()) {
+    header("Location: /checklist/public/login");
+}
+
+set_time_limit(0);
+
 $dados = Container::getSelectClientsChecklist();
 $id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
 $dados->setId($id);
