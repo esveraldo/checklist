@@ -148,7 +148,9 @@ if($result != false){
     //Envio de email
     
     $emailOfficeTotal = new App\Helpers\SendEmail("pablo.oliveira@officetotal.com.br", "Checklist", $mensagemOfficeTotal, "Office Total");
+    $emailOfficeTotal->enviar();
     $emailCliente = new App\Helpers\SendEmail($email, "Recebemos o seu Checklist", $mensagemCliente, "Office Total");
+    $emailCliente->enviar();
     
     $response = array("status" => "success", "message" => "success");
     
