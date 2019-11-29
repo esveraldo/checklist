@@ -12,13 +12,13 @@
  * @author aldo
  */
 
-namespace PHPMailer\PHPMailer;
+namespace App\Helpers\PHPMailer;
 
 //define('PATH', "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use App\Helpers\PHPMailer\PHPMailer;
+use App\Helpers\PHPMailer\Exception;
 
 class Email {
     
@@ -41,7 +41,7 @@ class Email {
             //$mail->SMTPDebug = 2;                                  // Enable verbose debug output
             $this->mail->SMTPDebug = false;                             // Enable verbose debug output
             $this->mail->isSMTP();                                      // Set mailer to use SMTP
-            $this->mail->Host = 'smtp.officetotal.com.br';                     // Specify main and backup SMTP servers
+            $this->mail->Host = 'outlook.mandic.com.br';                     // Specify main and backup SMTP servers
             $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
             $this->mail->Username = 'alerta@officetotal.com.br';                 // SMTP username
             $this->mail->Password = '@@Oft2017';                          // SMTP password
@@ -49,7 +49,7 @@ class Email {
             $this->mail->Port = 587;                                    // TCP port to connect to
             $this->mail->CharSet = 'UTF-8';
             //Recipients
-            $this->mail->setFrom('alerta@officetotal.com.br');
+            $this->mail->setFrom('pablo.oliveira@officetotal.com.br');
             //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
             $this->mail->addAddress($this->email);                           // Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');

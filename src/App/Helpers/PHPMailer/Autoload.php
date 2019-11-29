@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace PHPMailer\PHPMailer;
+namespace App\Helpers\PHPMailer;
 
 /**
  * Description of Autoload

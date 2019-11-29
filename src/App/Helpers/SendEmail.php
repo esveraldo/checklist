@@ -8,7 +8,6 @@
  * $email->bcc = 'email1@email.com,email2@email.com';
  * $envio = $email->enviar();	 
  * 
- * @author Marlon U. Marcello <marlon.marcello@gmail.com>
  * @version 1.0
  */
 

@@ -9,6 +9,7 @@
 require_once '../../../vendor/autoload.php';
 
 use App\DI\Container;
+use App\Helpers\PHPMailer\Email;
 
 $rsocial = filter_input(INPUT_POST, 'rsocial', FILTER_DEFAULT);
 $cnpj = filter_input(INPUT_POST, 'cnpj', FILTER_DEFAULT);
@@ -133,9 +134,6 @@ $insertDados = Container::getInsertClientsChecklist();
 $insertDados->setFields($fields);
 $result = $insertDados->insert();
 
-include_once './template.php';
-include_once './template-checklist.php';
-
 
 $response = array("status" => null, "success" => null, "message" => null);
 
@@ -145,22 +143,15 @@ if($result != false){
     $insertDados->setStatus("inicial");
     $insertDados->setObs("Sem observações");
     $insertDados->insertObs();
-    //Envio de email
-    
-    $emailOfficeTotal = new App\Helpers\SendEmail("pablo.oliveira@officetotal.com.br", "Checklist", $mensagemOfficeTotal, "Office Total");
-    $emailOfficeTotal->enviar();
-    $emailCliente = new App\Helpers\SendEmail($email, "Recebemos o seu Checklist", $mensagemCliente, "Office Total");
-    $emailCliente->enviar();
+    //Envio de email 
+    require_once './template.php';
+    require_once './template-checklist.php';
+    $officeTotal = new Email('pablo.oliveira@officetotal.com.br', 'Checklist', $mensagemOfficeTotal);
+    $cliente = new Email($email, 'Recebemos seu checklist', $mensagemCliente);
+    var_dump($cliente);
     
     $response = array("status" => "success", "message" => "success");
     
-//    require_once '../../libs/PHPMailer/src/Exception.php';
-//    require_once '../../libs/PHPMailer/src/PHPMailer.php';
-//    require_once '../../libs/PHPMailer/src/SMTP.php';
-//    require_once '../../libs/PHPMailer/src/Email.php';
-//
-//    $officeTotal = new PHPMailer\PHPMailer\Email('pablo.oliveira@officetotal.com.br', 'Checklist', $mensagemOfficeTotal);
-//    $cliente = new PHPMailer\PHPMailer\Email($email, 'Recebemos seu checklist', $mensagemCliente);
 }else{
     $response = array("status" => "failed", "message" => "failed");
 }
