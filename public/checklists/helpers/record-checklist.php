@@ -148,7 +148,6 @@ if($result != false){
     require_once './template-checklist.php';
     $officeTotal = new Email('pablo.oliveira@officetotal.com.br', 'Checklist', $mensagemOfficeTotal);
     $cliente = new Email($email, 'Recebemos seu checklist', $mensagemCliente);
-    var_dump($cliente);
     
     $response = array("status" => "success", "message" => "success");
     
