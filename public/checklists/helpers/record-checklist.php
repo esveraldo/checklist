@@ -127,20 +127,38 @@ $fields = array($rsocial, $cnpj, $endereco, $contato, $telefone, $email, $bilhet
                 $antivirus_utilizado, $erp_utilizado, $plataforma_erp, $impressao_erp, $bilhetagem_erp, $forma_desej_bilhetagem_erp, 
                 $em_cluster, $em_cetrix, $solaris, $ibm, $amb_impressao_extraordinario, $mod_e_qtde_de_impressoras, $mod_e_qtde_de_impressoras_usb,
                 $server_imp_resp, $restricoes_do_fabricante, $descricao_restricao, $objetivo_projeto, $observacoes_adicionais);  
-        
+
+//Inserindo dados no checklist
 $insertDados = Container::getInsertClientsChecklist();
 $insertDados->setFields($fields);
 $result = $insertDados->insert();
+
+include_once './template.php';
+include_once './template-checklist.php';
 
 
 $response = array("status" => null, "success" => null, "message" => null);
 
 if($result != false){
+    //Inserindo dados no status
     $insertDados->setClients_checklist_id($result);
     $insertDados->setStatus("inicial");
     $insertDados->setObs("Sem observações");
     $insertDados->insertObs();
+    //Envio de email
+    
+    $emailOfficeTotal = new App\Helpers\SendEmail("pablo.oliveira@officetotal.com.br", "Checklist", $mensagemOfficeTotal, "Office Total");
+    $emailCliente = new App\Helpers\SendEmail($email, "Recebemos o seu Checklist", $mensagemCliente, "Office Total");
+    
     $response = array("status" => "success", "message" => "success");
+    
+//    require_once '../../libs/PHPMailer/src/Exception.php';
+//    require_once '../../libs/PHPMailer/src/PHPMailer.php';
+//    require_once '../../libs/PHPMailer/src/SMTP.php';
+//    require_once '../../libs/PHPMailer/src/Email.php';
+//
+//    $officeTotal = new PHPMailer\PHPMailer\Email('pablo.oliveira@officetotal.com.br', 'Checklist', $mensagemOfficeTotal);
+//    $cliente = new PHPMailer\PHPMailer\Email($email, 'Recebemos seu checklist', $mensagemCliente);
 }else{
     $response = array("status" => "failed", "message" => "failed");
 }
