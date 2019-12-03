@@ -41,7 +41,7 @@ class Email {
             //$mail->SMTPDebug = 2;                                  // Enable verbose debug output
             $this->mail->SMTPDebug = false;                             // Enable verbose debug output
             $this->mail->isSMTP();                                      // Set mailer to use SMTP
-            $this->mail->Host = 'outlook.mandic.com.br';                     // Specify main and backup SMTP servers
+            $this->mail->Host = 'smtp.officetotal.com.br';                     // Specify main and backup SMTP servers
             $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
             $this->mail->Username = 'alerta@officetotal.com.br';                 // SMTP username
             $this->mail->Password = '@@Oft2017';                          // SMTP password

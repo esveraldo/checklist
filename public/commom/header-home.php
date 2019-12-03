@@ -19,10 +19,13 @@ error_reporting(E_ALL);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet" id="bootstrap-css">
         <link href="../assets/css/home.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <title>Checklist Office Total</title>
     </head>
     <body>
@@ -54,9 +57,9 @@ error_reporting(E_ALL);
 
         <!-- Main -->
 
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12" style="border: 1px solid #EEEEEE; padding: 10px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; background: #EEEEEE;">
 
-            <ul class="nav nav-pills nav-stacked" style="border-right:1px solid black">
+            <ul class="nav nav-pills nav-stacked">
                 <!--<li class="nav-header"></li>-->
                 <li><a href="/checklist/public/home"><i class="fa fa-home"></i> Página inicial</a></li>
                 <li><a href="/checklist/public/checklists/listagem"><i class="fa fa-list"></i> Checklist</a></li>
