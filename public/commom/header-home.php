@@ -30,18 +30,16 @@ error_reporting(E_ALL);
     </head>
     <body>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-
-        <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/checklist/public/home"><img src="assets/images/logo-officetotal.png" width="100px" /></a>
-                </div>
-                <div class="navbar-collapse collapse">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/checklist/public/home"><img src="assets/images/logo-officetotal.png" width="100px" /></a>
+                    </div>
+                    <!--                    <ul class="nav navbar-nav">
+                                            <li class="active"><a href="#">Home</a></li>
+                                            <li><a href="#">Page 1</a></li>
+                                            <li><a href="#">Page 2</a></li>
+                                        </ul>-->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> <?php echo $_SESSION['nome'];?> <span class="caret"></span></a>
@@ -49,7 +47,7 @@ error_reporting(E_ALL);
                         <li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                     </ul>
                 </div>
-            </div>
+            </nav>
             <!-- /container -->
         </div>
 

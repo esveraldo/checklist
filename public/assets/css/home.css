@@ -16,7 +16,7 @@ and open the template in the editor.
 }
 .navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>.dropdown>a .caret
 {
-    color: #fff;
+    color: #9d9d9d;
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus,
 .navbar-nav>li>.dropdown-menu
