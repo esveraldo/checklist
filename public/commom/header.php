@@ -26,6 +26,7 @@ error_reporting(E_ALL);
         <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet" id="bootstrap-css">
         <link href="../assets/css/home.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <title>Checklist Office Total</title>
     </head>
     <body>
