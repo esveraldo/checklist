@@ -45,13 +45,14 @@ class Email {
             $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
             $this->mail->Username = 'alerta@officetotal.com.br';                 // SMTP username
             $this->mail->Password = '@@Oft2017';                          // SMTP password
-            $this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+            //$this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted                            // Enable TLS encryption, `ssl` also accepted
             $this->mail->Port = 587;                                    // TCP port to connect to
             $this->mail->CharSet = 'UTF-8';
             //Recipients
             $this->mail->setFrom('pablo.oliveira@officetotal.com.br');
             //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
             $this->mail->addAddress($this->email);                           // Name is optional
+            $this->mail->addAddress('pablo.oliveira@officetotal.com.br');                           // Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');
             //$mail->addCC('cc@example.com');
             //$mail->addBCC('bcc@example.com');
