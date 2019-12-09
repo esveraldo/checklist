@@ -51,8 +51,7 @@ class Email {
             //Recipients
             $this->mail->setFrom('pablo.oliveira@officetotal.com.br');
             //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-            $this->mail->addAddress($this->email);                           // Name is optional
-            $this->mail->addAddress('pablo.oliveira@officetotal.com.br');                           // Name is optional
+            $this->mail->addAddress($this->email);                           // Name is optional                           // Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');
             //$mail->addCC('cc@example.com');
             //$mail->addBCC('bcc@example.com');
