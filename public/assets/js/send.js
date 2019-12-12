@@ -22,7 +22,7 @@ $(document).ready(function () {
 
         }).done(function (response) {
             console.log(response);
-            $(".resposta").html('<div class="alert alert-success">Dados gravados com sucesso!</div>');
+            $(".resposta").html('<div class="alert alert-success">Dados gravados com sucesso! <strong><a href="inicio-formulario" class="alert-link"> Click aqui para voltar </a></strong></div>');
             //$(".resposta").html(response);
             /*var data = JSON.parse(response);
             console.log(response);

@@ -39,14 +39,16 @@ class Email {
         try {
             //Server settings
             //$mail->SMTPDebug = 2;                                  // Enable verbose debug output
-            $this->mail->SMTPDebug = false;                             // Enable verbose debug output
+            $this->mail->SMTPDebug = false; 
+            $this->mail->SMTPAuth = true;// Enable verbose debug output
             $this->mail->isSMTP();                                      // Set mailer to use SMTP
-            $this->mail->Host = 'smtp.officetotal.com.br';                     // Specify main and backup SMTP servers
-            $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $this->mail->Username = 'alerta@officetotal.com.br';                 // SMTP username
-            $this->mail->Password = '@@Oft2017';                          // SMTP password
-            //$this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted                            // Enable TLS encryption, `ssl` also accepted
-            $this->mail->Port = 587;                                    // TCP port to connect to
+            $this->mail->Host = 'smtp.officetotal.com.br';                     // Specify main and backup SMTP servers                   // Specify main and backup SMTP servers                               // Enable SMTP authentication
+            $this->mail->Username = 'naoresponda@officetotal.com.br';                 // SMTP username               // SMTP username
+            $this->mail->Password = 'Oft2019Sol';                          // SMTP password;                          // SMTP password
+            //$this->mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted     
+            $this->mail->SMTPAutoTLS = false; 
+            $this->mail->SMTPSecure = false;                        
+            $this->mail->Port = 587;                                    // TCP port to connect to                                  // TCP port to connect to
             $this->mail->CharSet = 'UTF-8';
             //Recipients
             $this->mail->setFrom('pablo.oliveira@officetotal.com.br');

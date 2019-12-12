@@ -83,7 +83,7 @@ $mensagemCliente = '
                                                 <div style="font-family: Arial;
                                                    font-size: 15px; font-weight: normal; line-height:
                                                    170%; text-align: left; color: rgb(120,113,99);
-                                                   word-wrap: break-word;">
+                                                   word-wrap: break-word; text-align: center;">
                                                    <div style="text-align:
                                                       center; color: rgb(120,113,99);"><span style="line-height: 0; display: none; color:
                                                       rgb(120,113,99);"></span>Equipe Office Total.
