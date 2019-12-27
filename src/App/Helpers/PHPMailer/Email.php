@@ -51,7 +51,8 @@ class Email {
             $this->mail->Port = 587;                                    // TCP port to connect to                                  // TCP port to connect to
             $this->mail->CharSet = 'UTF-8';
             //Recipients
-            $this->mail->setFrom('pablo.oliveira@officetotal.com.br');
+            //$this->mail->setFrom('pablo.oliveira@officetotal.com.br');
+            $this->mail->setFrom('suporte.sistemas@officetotal.com.br');
             //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
             $this->mail->addAddress($this->email);                           // Name is optional                           // Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');
