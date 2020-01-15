@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS clients_checklist (
     sites varchar(10) null,
     impressao varchar(10) null,
     sem_server_imp varchar(10) null,
-    sis_op varchar(10) null,
+    sis_op varchar(255) null,
     comunicacao_entre_sites varchar(5) null,
     user_autentic_estacoes varchar(255) null,
     imp_rede_usb varchar(5) null,
