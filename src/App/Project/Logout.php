@@ -5,8 +5,8 @@ namespace App\Project;
 
 session_start();
 
-//$logout = new Logout();
-//$logout->endSes();
+$logout = new Logout();
+$logout->endSes();
 
 class Logout
 {
